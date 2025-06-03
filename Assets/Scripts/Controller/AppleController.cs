@@ -7,7 +7,7 @@ public class AppleController : MonoBehaviour
 
     void Start()
     {
-        Respawn();
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -15,7 +15,7 @@ public class AppleController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameEvents.OnAppleEaten?.Invoke();
-            Respawn();
+            Destroy(gameObject);
         }
     }
 

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -70,4 +71,5 @@ public class GameController : MonoBehaviour
     {
         appleSpawner.Spawn();
     }
+
 }
