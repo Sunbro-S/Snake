@@ -20,7 +20,7 @@ public class NavMeshSpawner : MonoBehaviour
 
             if (NavMesh.SamplePosition(randomPoint, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas))
             {
-                Instantiate(prefabToSpawn, hit.position, Quaternion.identity);
+                Instantiate(prefabToSpawn, hit.position + new Vector3(0,0.2f, 0), Quaternion.identity);
                 return;
             }
         }
