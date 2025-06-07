@@ -18,7 +18,7 @@ public class ScoreView : MonoBehaviour
 
     public void UpdateScore(int score, int highScore)
     {
-        scoreText.text = $"Score: {score}";
-        highScoreText.text = $"High: {SaveSystem.LoadHighScore()}";
+        scoreText.text = $"{score}";
+        highScoreText.text = $"{SaveSystem.LoadHighScore()}";
     }
 }

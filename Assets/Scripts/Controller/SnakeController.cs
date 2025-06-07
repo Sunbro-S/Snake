@@ -32,7 +32,10 @@ public class SnakeController : MonoBehaviour
         tail.position = body.position - transform.forward * model.BodySpacing;
         model.AddBodyPart(tail);
     }
-
+    private void OnDestroy()
+    {
+        GameEvents.OnAppleEaten -= Grow;
+    }
     void Update()
     {
         HandleRotation();

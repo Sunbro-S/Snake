@@ -10,7 +10,8 @@ public class ObstacleController : MonoBehaviour
             if (snake != null)
             {
                 Debug.Log("Змея вошла в триггер-препятствие!");
-                snake.enabled = false; // Отключаем движение
+                snake.enabled = false;
+                GameEvents.OnWallHit?.Invoke();
             }
         }
     }
